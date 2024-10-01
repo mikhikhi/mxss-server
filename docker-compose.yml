@@ -1,0 +1,18 @@
+version: '3'
+services:
+  go:
+    build: ./go/
+    ports:
+     - "9090:9090"
+    networks:
+      - lab
+  python:
+    build: ./python/
+    networks:
+      - lab
+  node:
+    build: ./node/
+    networks:
+      - lab
+networks:
+  lab:
